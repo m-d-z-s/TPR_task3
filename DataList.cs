@@ -2,26 +2,30 @@
 
 public class DataList
 {
-    public List<Data> listOfData;
+    public List<Data> ListOfData;
 
     public DataList(List<Data> listOfData)
     {
-        this.listOfData = listOfData;
+        this.ListOfData = listOfData;
     }
 
     public override string ToString()
     {
-        return listOfData.Aggregate("", (current, item) => current + item);
+        var output = "";
+        foreach (var item in ListOfData)
+        {
+            output += item.ToString();
+        }
+        return ListOfData.Aggregate("", (current, item) => current + item);
     }
 
     public void Sort()
     {
-        listOfData = listOfData.OrderByDescending(entry => -entry.travelTime)
-            .ThenByDescending(entry => -entry.distanceToUni)
-            .ThenByDescending(entry => entry.condition)
-            .ThenByDescending(entry => -entry.price)
-            .ThenByDescending(entry => -entry.hasBusStop)
-            .ThenByDescending(entry => entry.hasBalcony).ToList();
+        ListOfData = ListOfData.OrderByDescending(entry => -entry.TravelTime)
+            .ThenByDescending(entry => entry.DistanceToUni)
+            .ThenByDescending(entry => entry.Condition)
+            .ThenByDescending(entry => entry.Price)
+            .ThenByDescending(entry => entry.TimeToBusStop)
+            .ThenByDescending(entry => entry.HasBalcony).ToList();
     }
 }
-

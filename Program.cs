@@ -1,47 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace task3;
 
-
-namespace task3
+public static class Program
 {
-    static class Program
+    private static void Main()
     {
-        private static void Main(string[] args)
+        var apartments =  ToolBox.CollectInfo(); // collecting data about apartments
+        
+        Console.WriteLine("Initial dataset:"); // showing the initial dataset
+        foreach (var item in apartments.ListOfData) 
         {
-            var apart =  ToolBox.CollectInfo();
-            foreach (var item in apart.listOfData)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine("pareto");
-            var pareto = Methods.Pareto(apart);
-            foreach (var item in pareto.listOfData)
-            {
-                Console.WriteLine(item);
-            }
-            
-            Console.WriteLine("pareto min");
-            var paretoMin = Methods.ParetoMin(pareto);
-            foreach (var item in paretoMin.listOfData)
-            {
-                Console.WriteLine(item);
-            }
-            
-            Console.WriteLine("Sub");
-            var sub = Methods.Sub(paretoMin);
-            Console.WriteLine(sub);
-
-            Console.WriteLine("Optimization");
-            var optimization = Methods.Optimization(apart);
-            Console.WriteLine(optimization);
-
-            Console.WriteLine("Five");
-            var five = Methods.Five(apart);
-            Console.WriteLine(five);
+            Console.WriteLine(item);
         }
+        
+        Console.WriteLine("\nPareto's set:"); // getting Pareto's set 
+        var pareto = Methods.Pareto(apartments);
+        foreach (var item in pareto.ListOfData)
+        {
+            Console.WriteLine(item);
+        }
+            
+        Console.WriteLine("\nPareto's set with lowest criteria: "); // narrowing Pareto's set by comparing to the lowest
+        var paretoMin = Methods.ParetoMin(pareto);
+        foreach (var item in paretoMin.ListOfData)
+        {
+            Console.WriteLine(item);
+        }
+            
+        Console.WriteLine("\nSub-optimisation:"); // getting the result by sub-optimisation
+        var sub = Methods.SubOptimisation(paretoMin);
+        Console.WriteLine(sub);
+
+        Console.WriteLine("\nOptimization"); // getting the result by lexicographical method
+        var lexicographicsResult = Methods.Lexicographics(apartments);
+        Console.WriteLine(lexicographicsResult);
+
+        Console.WriteLine("\nResult by combined criteria:"); // getting the result by combined criteria method
+        var combinedCriteriaResult = Methods.CombinedCriteria(apartments);
+        Console.WriteLine(combinedCriteriaResult);
     }
 }
-

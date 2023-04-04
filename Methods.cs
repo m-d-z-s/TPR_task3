@@ -1,13 +1,11 @@
-﻿using NPOI.POIFS.FileSystem;
-
-namespace task3;
+﻿namespace task3;
 
 public static class Methods
 {
     public static DataList Pareto(DataList dataList)
     {
         var paretoSet = new HashSet<Data>();
-        foreach (var entry in dataList.listOfData)
+        foreach (var entry in dataList.ListOfData)
         {
             var isParetoOptimal = true;
             foreach (var other in paretoSet)
@@ -17,10 +15,8 @@ public static class Methods
                     isParetoOptimal = false;
                     break;
                 }
-
                 if (entry.Dominates(other)) paretoSet.Remove(other);
             }
-
             if (isParetoOptimal) paretoSet.Add(entry);
         }
 
@@ -31,7 +27,7 @@ public static class Methods
     {
         var minimum = new Data(0, 30000, 3.5, 15, 1, false, 30);
         var paretoSetMin = new HashSet<Data>();
-        foreach (var entry in dataList.listOfData)
+        foreach (var entry in dataList.ListOfData)
         {
             if (entry.EqualOrGreaterThen(minimum))
             {
@@ -42,24 +38,23 @@ public static class Methods
         return new DataList(paretoSetMin.ToList());
     }
 
-    public static Data Sub(DataList dataList) =>
-        dataList.listOfData.Aggregate((max, it) => it.condition > max.condition ? it : max);
+    public static Data SubOptimisation(DataList dataList) =>
+        dataList.ListOfData.Aggregate((max, it) => it.Condition > max.Condition ? it : max);
 
-    public static Data Optimization(DataList dataList)
+    public static Data Lexicographics(DataList dataList)
     {
         dataList.Sort();
-        return dataList.listOfData[0];
+        return dataList.ListOfData[0];
     }
 
-    public static Data Five(DataList dataList)
+    public static Data CombinedCriteria(DataList dataList)
     {
         var dataWithCriteria = new Dictionary<double, Data>();
-        foreach (var item in dataList.listOfData)
+        foreach (var item in dataList.ListOfData)
         {
             dataWithCriteria.Add(item.GetMark(),item);
         }
 
         return dataWithCriteria[dataWithCriteria.Max(pair=>pair.Key)];
     }
-    
 }

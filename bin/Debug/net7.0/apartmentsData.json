@@ -1,0 +1,184 @@
+﻿{
+  "listOfData": [
+    {
+      "Id": 0,
+      "Price": 30000,
+      "DistanceToUni": 1.44,
+      "TimeToBusStop": 7,
+      "Condition": 2,
+      "HasBalcony": false,
+      "TravelTime": 22
+    },
+    {
+      "Id": 1,
+      "Price": 22000,
+      "DistanceToUni": 1.69,
+      "TimeToBusStop": 6,
+      "Condition": 1,
+      "HasBalcony": true,
+      "TravelTime": 19
+    },
+    {
+      "Id": 2,
+      "Price": 27000,
+      "DistanceToUni": 1.76,
+      "TimeToBusStop": 10,
+      "Condition": 1,
+      "HasBalcony": true,
+      "TravelTime": 18
+    },
+    {
+      "Id": 3,
+      "Price": 40000,
+      "DistanceToUni": 1.7,
+      "TimeToBusStop": 9,
+      "Condition": 2,
+      "HasBalcony": true,
+      "TravelTime": 18
+    },
+    {
+      "Id": 4,
+      "Price": 27000,
+      "DistanceToUni": 3.6,
+      "TimeToBusStop": 5,
+      "Condition": 0,
+      "HasBalcony": false,
+      "TravelTime": 20
+    },
+    {
+      "Id": 5,
+      "Price": 40000,
+      "DistanceToUni": 3.6,
+      "TimeToBusStop": 5,
+      "Condition": 2,
+      "HasBalcony": true,
+      "TravelTime": 20
+    },
+    {
+      "Id": 6,
+      "Price": 28000,
+      "DistanceToUni": 3.2,
+      "TimeToBusStop": 4,
+      "Condition": 1,
+      "HasBalcony": true,
+      "TravelTime": 20
+    },
+    {
+      "Id": 7,
+      "Price": 30000,
+      "DistanceToUni": 4.1,
+      "TimeToBusStop": 6,
+      "Condition": 2,
+      "HasBalcony": false,
+      "TravelTime": 27
+    },
+    {
+      "Id": 8,
+      "Price": 23000,
+      "DistanceToUni": 4.1,
+      "TimeToBusStop": 6,
+      "Condition": 0,
+      "HasBalcony": false,
+      "TravelTime": 27
+    },
+    {
+      "Id": 9,
+      "Price": 20000,
+      "DistanceToUni": 2.22,
+      "TimeToBusStop": 8,
+      "Condition": 0,
+      "HasBalcony": false,
+      "TravelTime": 15
+    },
+    {
+      "Id": 10,
+      "Price": 55000,
+      "DistanceToUni": 3.7,
+      "TimeToBusStop": 7,
+      "Condition": 2,
+      "HasBalcony": true,
+      "TravelTime": 30
+    },
+    {
+      "Id": 11,
+      "Price": 30000,
+      "DistanceToUni": 3.7,
+      "TimeToBusStop": 10,
+      "Condition": 1,
+      "HasBalcony": false,
+      "TravelTime": 31
+    },
+    {
+      "Id": 12,
+      "Price": 40000,
+      "DistanceToUni": 3.8,
+      "TimeToBusStop": 12,
+      "Condition": 1,
+      "HasBalcony": true,
+      "TravelTime": 31
+    },
+    {
+      "Id": 13,
+      "Price": 28000,
+      "DistanceToUni": 3.9,
+      "TimeToBusStop": 4,
+      "Condition": 1,
+      "HasBalcony": false,
+      "TravelTime": 30
+    },
+    {
+      "Id": 14,
+      "Price": 28000,
+      "DistanceToUni": 3.9,
+      "TimeToBusStop": 5,
+      "Condition": 1,
+      "HasBalcony": false,
+      "TravelTime": 31
+    },
+    {
+      "Id": 15,
+      "Price": 30000,
+      "DistanceToUni": 4.1,
+      "TimeToBusStop": 7,
+      "Condition": 0,
+      "HasBalcony": true,
+      "TravelTime": 30
+    },
+    {
+      "Id": 16,
+      "Price": 23000,
+      "DistanceToUni": 4.4,
+      "TimeToBusStop": 3,
+      "Condition": 0,
+      "HasBalcony": false,
+      "TravelTime": 32
+    },
+    {
+      "Id": 17,
+      "Price": 72000,
+      "DistanceToUni": 4.7,
+      "TimeToBusStop": 6,
+      "Condition": 2,
+      "HasBalcony": true,
+      "TravelTime": 32
+    },
+    {
+      "Id": 18,
+      "Price": 25000,
+      "DistanceToUni": 4.7,
+      "TimeToBusStop": 5,
+      "Condition": 0,
+      "HasBalcony": true,
+      "TravelTime": 32
+    },
+    {
+      "Id": 19,
+      "Price": 40000,
+      "DistanceToUni": 3.6,
+      "TimeToBusStop": 10,
+      "Condition": 1,
+      "HasBalcony": true,
+      "TravelTime": 48
+    }
+  ]
+}
